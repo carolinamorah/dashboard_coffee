@@ -1,0 +1,55 @@
+<div id='graphic'>
+    <h1>Ventas mensuales de los últimos 12 meses</h1>
+
+        <%= column_chart @last12m_sales, stacked: true, prefix:
+        "$: ", thousands: "," %> 
+
+    <h1>Cantidad de ventas mensual de los últimos 12 meses.</h1>
+
+        <%= column_chart @last12m_sales_count, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1>Promedio de venta mensual de los últimos 12 meses.</h1>
+
+        <%= column_chart @last12m_sales_average, stacked: true, prefix:
+        "promedio: ", thousands: "," %>
+
+    <h1>Cantidad de ventas según el origen del café en: los últimos 12 meses.</h1>
+
+        <%= pie_chart @piechart_last12m_sales,stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+
+    <h1>Cantidad de ventas según el origen del café en: los últimos 6 meses.</h1>
+        <%= pie_chart @piechart_last6m_sales, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1>Cantidad de ventas según el origen del café en: los últimos 3 meses.</h1>
+        <%= pie_chart @piechart_last3m_sales, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1>Cantidad de ventas según el origen del café en: el último mes</h1>
+
+        <%= pie_chart @piechart_last1m_sales, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1> Ventas según el nombre de la mezcla del café en: los últimos 12 meses.</h1>
+
+        <%= pie_chart @last12_sales_blend, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1> Ventas según el nombre de la mezcla del café en: los últimos 6 meses.</h1>
+
+        <%= pie_chart @last6_sales_blend, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1> Ventas según el nombre de la mezcla del café en: los últimos 3 meses.</h1>
+
+        <%= pie_chart @last3_sales_blend, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+
+    <h1> Ventas según el nombre de la mezcla del café en: en el ultimo mes.</h1>
+
+        <%= pie_chart @last1_sales_blend, stacked: true, prefix:
+        "Cantidad: ", thousands: "," %>
+</div>
